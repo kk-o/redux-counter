@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { connect } from "react-redux";
 import './Counter.css';
 
 class Counter extends Component {
 
   increment = () => {
     // fill in later
-  }
+  };
 
   decrement = () => {
     // fill in later
-  }
+  };
 
   render() {
     return (
@@ -26,4 +26,4 @@ class Counter extends Component {
   }
 }
 
-export default Counter;
+export default connect()(Counter);
