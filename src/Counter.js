@@ -5,11 +5,11 @@ import './Counter.css';
 class Counter extends Component {
 
   increment = () => {
-    // fill in later
+    this.props.dispatch({ type: "INCREMENT" });
   };
 
   decrement = () => {
-    // fill in later
+    this.props.dispatch({ type: "DECREMENT" });
   };
 
   render() {
