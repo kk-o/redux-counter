@@ -2,14 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import Counter from "./Counter";
-import { createStore } from "redux";
+import { createStore } from "redux"; // used to create store
 import { Provider } from "react-redux";
 
 const initialState = {
   count: 0
 };
 
-// function that is responsible for returning state
+// decides what our initial state is 
 function reducer(state = initialState, action) {
   switch (action.type) {
     case "INCREMENT":
@@ -26,8 +26,6 @@ function reducer(state = initialState, action) {
 }
 
 const store = createStore(reducer);
-store.dispatch({ type: "INCREMENT" });
-store.dispatch({ type: "DECREMENT" });
 
 const App = () => (
   <Provider store={store}>
